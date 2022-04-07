@@ -1,7 +1,6 @@
 from howplot import *
 
-def model(x, p):
-    return x ** (2 * p + 1) / (1 + x ** (2 * p))
+rcParams.update(line_params)
 
 x = [10,20,30,40,50,60,70,80,90,100]
 y1 = [20,40,10,20,40,10,20,40,10,90] 

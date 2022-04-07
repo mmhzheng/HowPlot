@@ -50,8 +50,10 @@ params = {
     #--- axes
     'axes.linewidth' : 1.0,
     'lines.linewidth' : 1.8,
-    'axes.prop_cycle' : (cycler(color = ['#CC6677', '#332288', '#DDCC77', '#117733', '#88CCEE']) + cycler(ls = ['-', '--', ':', '-.', ''])),
-
+    'axes.prop_cycle' : (cycler(color = ['#0C5DA5', '#00B945', '#FF9500', '#FF2C00', '#845B97']) 
+                       + cycler(ls = ['-', '--', ':', '-.', '']) 
+                       + cycler('marker', ['o', 's', '^', 'v', '<'])),
+    'lines.markersize' : 5
     #--- scatters
     # Set markers (style, color, no lines)
     # 'axes.prop_cycle' : (cycler('marker', ['o', 's', '^', 'v', '<', '>', 'd']) 
@@ -60,3 +62,4 @@ params = {
     # 'lines.markersize' : 3,
 }
 rcParams.update(params)
+

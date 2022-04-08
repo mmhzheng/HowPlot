@@ -11,7 +11,7 @@ plot(x, y2, label="line2")
 # ylim(0.0, 30.) 
 xlabel("Memory Usage (MB)")
 ylabel("F1 Score")
-legend(loc='upper center', bbox_to_anchor=(0.5, 1.20), ncol=2)
+legend(loc='upper center', bbox_to_anchor=(0.5, 1.18), ncol=2)
 savefig('figs/examples/lines_out.pdf')
 
 

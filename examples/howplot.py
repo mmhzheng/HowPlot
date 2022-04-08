@@ -45,7 +45,7 @@ line_params = {
     'legend.title_fontsize' : 12,
     'text.usetex' : True,
     'text.latex.preamble': r'\usepackage{libertine}\usepackage{fixltx2e}',
-    'font.family': 'sans-serif',
+    'font.family': 'Times New Roman',
 
     #--- axes
     'axes.linewidth' : 1.0,
@@ -72,6 +72,15 @@ bar_params = {
     'legend.frameon' : 'False',
     'legend.fancybox': True,
 
+    #--- grid
+    "axes.grid" : True, 
+    'grid.linewidth' : 0.5,
+    'grid.linestyle' : '--',
+    'grid.alpha': 0.5,
+    'grid.color' : (0.5, 0.5, 0.5, 0.1),
+    "axes.grid.axis" : "y",
+    'axes.axisbelow' : True,
+
     #--- font
     'font.serif' : 'Times',
     'mathtext.fontset':'dejavuserif',
@@ -83,15 +92,15 @@ bar_params = {
     'legend.title_fontsize' : 12,
     'text.usetex' : True,
     'text.latex.preamble': r'\usepackage{libertine}\usepackage{fixltx2e}',
-    'font.family': 'sans-serif',
+    'font.family': 'Times New Roman',
 
-    # --- scatters
+    # --- bars
     # Set markers (style, color, no lines)
-    'axes.prop_cycle' : cycler('color', ['#0C5DA5', '#00B945', '#FF9500', '#FF2C00', '#845B97', '#474747', '#9e9e9e']),
+    'axes.prop_cycle' : cycler('color', ['#478fbd', '#00B945', '#f9a734', '#ff7052', '#9d72b1', '#474747', '#9e9e9e']),
     'hatch.color' :'k',
     'lines.markersize' : 3,
+    'hatch.linewidth' : 0.8
 }
-
 
 scatter_params = {
     #--- Figure Size
@@ -131,7 +140,7 @@ scatter_params = {
     'legend.title_fontsize' : 12,
     'text.usetex' : True,
     'text.latex.preamble': r'\usepackage{libertine}\usepackage{fixltx2e}',
-    'font.family': 'sans-serif',
+    'font.family': 'Times New Roman',
 
     # --- scatters
     # Set markers (style, color, no lines)

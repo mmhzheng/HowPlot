@@ -1,24 +1,24 @@
-from cProfile import label
-import numpy as np
-import matplotlib.pyplot as plt
+from howplot import *
 
 
+rcParams.update(bar_params)
 
-with plt.style.context(['science', 'muted']):
-    fig, ax = plt.subplots()
-    data = [[30, 25, 50, 20],
-            [40, 23, 51, 17],
-            [35, 22, 45, 19]]
-    x_labels = ["Runoob-1", "Runoob-2", "Runoob-3", "C-RUNOOB"]
-    x = np.array([i for i in range(len(x_labels))])
-    ax.set_xticks([i for i in range(len(x_labels))])
-    ax.set_xticklabels(x_labels, rotation = 30)
-    ax.bar(x, data[0], width = 0.5, hatch='/', label='bar1')
-    ax.bar(x, data[1], bottom=data[0], width = 0.5, hatch='\\', label='bar2')
-    ax.bar(x, data[2], bottom=data[1], width = 0.5, hatch='-', label='bar3')
-    ax.legend()
-    ax.autoscale(tight=True) 
-    ax.set_xlabel('Memory Usage (MB)')
-    # Set the y axis label of the current axis.
-    ax.set_ylabel('F1 Score')
-    fig.savefig('figs/examples/bars_stack.pdf')
+
+WIDTH = 0.6
+
+data1 = [30, 25, 50, 50]
+data2 = [20, 25, 80, 10]
+data3 = [10, 25, 30, 30]
+
+x_labels = ["AAA", "BBB", "CC", "DD"]
+index = np.arange(len(x_labels))
+xticks(ticks=index, labels=x_labels, rotation=0)
+bar(index, data1,  width=WIDTH, hatch='//', label='data1')
+bar(index, data2, bottom=np.array(data1), width=WIDTH, hatch='\\\\', label='data2')
+bar(index, data3, bottom=np.array(data1) + np.array(data2), width=WIDTH, hatch='--', label='data3')
+
+legend()
+xlabel('Memory Usage (MB)')
+# Set the y axis label of the current axis.
+ylabel('F1 Score')
+savefig('figs/examples/bars_stack.pdf')

@@ -1,6 +1,7 @@
-from sympy import rotations
+import os,sys 
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) 
+sys.path.insert(0,parentdir)  
 from howplot import *
-
 
 rcParams.update(bar_params)
 
